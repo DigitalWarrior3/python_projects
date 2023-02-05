@@ -13,8 +13,8 @@ if user_input == "a":
     guessing_list = []
     for letter in letter_list:
         guessing_list.append('_')
-        uncomplete_word = ''.join(guessing_list)
-    
+    guessing_list[0] = letter_list[0]
+    uncomplete_word = ''.join(guessing_list)
     lives = len(uncomplete_word) 
     counter = 0
 
@@ -59,7 +59,11 @@ if user_input == "a":
 
         if counter == len(uncomplete_word):
             print("You won !")
-            break
+            break        
+            
+
+
+
             
             
 
